@@ -1,6 +1,6 @@
 Feature: MediCenter MillaBCJune2024
 
-Scenario: As a patient I want to create an appointment
+Scenario: As a patient to create an appointment
 Given I open url "https://medicenter-qa2.vercel.app/"
 #page title "Medical Center" is displayed
 Then element with xpath "//h1[contains(text(),'Medical Center')]" should be displayed
@@ -17,7 +17,7 @@ Then I wait for 2 sec
 Then I click on element with xpath "//option[@value='fa8b73e2-05f3-4d0e-a2df-920ae0fc4c9f']"
 When I type "07/16/2024" into element with xpath "//input[@id='date']"
 Then I wait for 2 sec
-Then I click on element using JavaScript with xpath "//button[contains(text(),'08:00 AM')]"
+Then I click on element with xpath "//button[contains(text(),'08:00 AM')]"
   Then I wait for 3 sec
 
   Then I click on element with xpath "//button[contains(text(),'Save')]"
@@ -32,7 +32,7 @@ Then element with xpath "//p[contains(text(),'Kim KIm')]" should be displayed
 
 
 @predefined1
-Scenario: As a patient I want to cancel an appointment
+Scenario: As a patient to cancel an appointment
   Given I open url "https://medicenter-qa2.vercel.app/"
 #page title "Medical Center" is displayed
  Then element with xpath "//h1[contains(text(),'Medical Center')]" should be present
@@ -43,7 +43,7 @@ Scenario: As a patient I want to cancel an appointment
   Then I click on element with xpath "//button[contains(text(),'Sign in')]"
   Then I wait for element with xpath "//h1[contains(text(),'James Johnson')]" to be present
 Then I wait for element with xpath "//h2[contains(text(),'Your appointments')]" to be present
-Then I click on element using JavaScript with xpath "//span[contains(text(),'update')]"
+Then I click on element with xpath "//span[contains(text(),'update')]"
 Then I wait for element with xpath "//h2[contains(text(),'Are you sure you want to cancel appointment?')]" to be present
-Then I click on element using JavaScript with xpath "//button[contains(text(),'Cancel appointment')]"
+Then I click on element with xpath "//button[contains(text(),'Cancel appointment')]"
   Then I wait for 3 sec
